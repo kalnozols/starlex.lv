@@ -1,0 +1,33 @@
+{
+  "name": "credify",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "rangeslider.js": "^2.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-build": "^0.5.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aweb",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/ausma_k/credify-aweb.git"
+  },
+  "homepage": "https://bitbucket.org/ausma_k/credify-aweb#readme",
+  "description": ""
+}

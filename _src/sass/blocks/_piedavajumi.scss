@@ -1,0 +1,22 @@
+.offers {
+
+  .info-block__content {
+    float: inherit;
+  }
+
+
+  h2{
+    @include font-baloo;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    color: $color-ocean;
+  }
+
+  .hero & {
+    @media #{$tablet}{
+    display: flex;
+    }
+  }
+}
+
+ 

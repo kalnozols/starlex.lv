@@ -1,0 +1,379 @@
+
+
+.single-page {
+    color:$color-bg-darkblue;
+    position: relative;
+    z-index: 2;
+      h2{ color: #FFF; margin-top:30px;}
+
+  .outer-wrap {
+   padding:100px 10% 200px;
+   margin-bottom: 100px;
+   background-color: #FFF;
+   &.without-bottom {margin-bottom: 0px;}
+  }
+
+  .left-image{
+    position: absolute;
+    top: 220px;
+    left:0px;
+    width:15%;
+      img {width: 100%;}
+  }
+
+    .right-image{
+    position: absolute;
+    top: 220px;
+    right:0px;
+    width:20%;
+    display: none;
+    @media screen and (min-width: 1200px) {display: block; }
+
+      img {width: 100%;}
+     
+  }
+
+  .inner-wrap {
+    max-width: 800px;
+    h2 {  color:$color-bg-darkblue;}
+    &.center {margin-right:auto; margin-left: auto;}
+  }
+
+  p {
+    padding:10px 0;
+    font-size: 0.8em;
+    text-align: justify;
+  }
+
+  h3 {font-weight: 400; }
+
+  h4:before {
+    content: '−';
+    color:$color-tirkizs;
+  }
+
+
+        ul {
+          margin-top:30px;
+                li {
+                  padding: 5px;
+                  font-weight: 600;
+                  font-size: 0.8em;
+                }
+
+                li:before {
+                content: '';
+                display: inline-block;
+                height: 23px;
+                width: 10px;
+                background-size: 10px;
+                background-image: url('../img/li-arrow.png');
+                background-repeat: no-repeat;
+                margin-right: 5px;
+                margin-bottom: -5px;
+                }
+
+
+                &.line{
+
+                  li:before {
+
+                content: '−';
+                 color:$color-tirkizs;
+                 background: none;
+                 font-size: 1.25em;
+                  }
+                }
+        }
+
+.open-item {
+
+        .toopen {
+          width:100%;
+          border: 1px solid #dbe4ed;
+          padding:10px 20px;
+          font-weight: 600;
+          font-size: 0.8em;
+          cursor: pointer;
+          margin:5px 0;
+
+          &:before {
+                content: '';
+                display: inline-block;
+                height: 23px;
+                width: 10px;
+                background-size: 10px;
+                background-image: url('../img/li-arrow.png');
+                background-repeat: no-repeat;
+                margin-right: 30px;
+                margin-bottom: -5px;
+                }
+        }
+
+        .itopens {
+          font-size: 0.8em;
+          padding:20px 0px 40px 50px;
+          display: none;
+          text-align: justify;
+        }
+
+
+
+    &.open {
+        .toopen {
+          background-color: #234682;
+          color:#FFF;
+
+          &:before {
+            background-image: url('../img/li-arrow-down.png');
+            background-size: 23px;
+            margin-right: 17px;
+            width: 23px;
+            margin-bottom: -15px;
+          }
+        }
+
+        .itopens {
+          display: block;
+      }
+
+
+    }
+
+
+}
+}
+
+body.single {
+  .left-block{
+    min-height: 500px;
+    z-index: 10;
+    width:100%;
+    @media #{$tablet} { float:left;  width: 500px; }
+    &.fixed {position: fixed; top:0;}
+
+    .white-wrap{
+    width: 100%;
+    z-index: 10;
+    background-color: #FFF;    
+    position: relative;    
+    padding:20px 20px 20px 60px;
+    color: $color-bg-darkblue;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+    .tr-wrap{
+    width: 100%;
+    z-index: 10;
+    position: relative;
+   
+
+    .image {
+      float: left;
+      width: 150px;
+      height: 150px; 
+      display: inline-block;
+      background-size: cover;
+     }
+    }
+    .tr-info {
+      float: left;
+      width: calc(100% - 150px);
+
+      .tr-contacts{
+      background-color: #234682;
+      color:#FFF;
+      padding:20px 30px;
+      font-size: 0.85em;
+      a {color: #FFF;}
+    }
+
+    .btn{
+        position: relative;
+        left: 0;
+        padding: 17px 30px;
+        height: 50px;
+    }
+    }
+
+
+      h2 {
+        color:$color-bg-darkblue;
+        font-size: 1.5em;
+        text-align: left;
+        margin-bottom: 25px;
+        font-family:'Montserrat', sans-serif;
+
+      }
+
+      .param-wrap{
+         padding-right: 20px;
+         position: relative;
+         width: 100%;
+         margin-bottom: 30px;
+
+
+        .param {
+          float:left; 
+          width:25%; 
+          padding-right:15px;
+           
+          font-size: 0.8em;
+
+          img {margin-bottom: 7px;}
+        }
+      }
+
+      .param-sec {
+        font-size: 0.9em;
+        line-height: 1.6em;
+
+        img {margin-right: 10px;}
+      }
+
+      .param-tre{
+        .tre-right {float: right;}
+        .tre-left {float:left;}
+         img {margin: 10px;}
+        }
+        
+      
+
+      ul {
+         margin: 20px 0; }
+         li {
+          padding: 5px;
+          font-size: 0.8em; 
+          font-weight: 200;
+
+          span {font-weight: 400;}
+
+          &:before {
+            content: '';
+            display: inline-block;
+            height: 23px;
+            width: 10px;
+            background-size: 10px;
+            background-image: url("../img/li-arrow-sm.png");
+            background-repeat: no-repeat;
+            margin-right: 5px;
+            margin-bottom: -5px; }
+          }
+
+  }
+
+  .left-block-empty.empty {float: left;  width: 500px; height: 300px;}
+
+
+  .right-block{
+    width:100%;
+    background-color: #FFF;
+    @media #{$tablet} { float:left;  width: calc(100% - 500px); }
+
+    .slide{
+      width:100%;
+      position: relative;
+
+      img {
+        width:100%; 
+        height: 100%;
+         object-fit: cover;
+    @media #{$desktop} { height: 550px;}
+       }
+
+      .single-image {
+        height:575px;
+        width:100%;
+        background-size: cover;
+      }
+
+      .next-img, .prev-img {
+        width:52px;
+        height:52px;
+        position: absolute;
+        bottom:60px;
+        opacity: 0.75;
+
+        &:hover {opacity: 1;}
+      }
+      .next-img {
+        right: 10px;
+        @media #{$mid} {  right: 80px;}
+        background: url('../img/lg-arrow-right.png') no-repeat;
+      }
+
+       .prev-img {
+        left:10px;
+        @media #{$mid} { left:80px;}
+        background: url('../img/lg-arrow-left.png') no-repeat;
+      }
+
+
+      .transparent-btn {
+     position: absolute;
+     left:calc(50% - 130px);
+     bottom:60px;
+    color:#FFF;
+    border:3px solid #FFF;
+    padding:10px 30px;
+    width: 260px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-align: center;
+    color:#FFF;
+    margin-left: 0;
+    display:none;
+    @media #{$mid} { display: block;}
+    &:hover { color:#129a94;}
+    img {display: none;}
+    }
+
+
+
+
+    }
+
+    .outer-wrap{
+      padding: 100px 10% 20px;
+    }
+
+    .youtube-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.youtube-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+    #animated-img {
+      position: relative;
+
+      a {  margin:10px; position: relative; display: inline-block;}
+
+       a:hover::after {
+          content: url('../img/pluss.png');
+          background-color: #1f384cb3;
+          width: 100%;
+          height:100%;
+          position: absolute;
+          top:0;
+          left:0;
+          text-align: center;
+          padding-top:50%;
+        }
+    }
+
+    #map{width:100%;
+      height: 400px;}
+    
+  }
+}
+

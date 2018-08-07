@@ -1,0 +1,51 @@
+.news-card {
+  @include card;
+  overflow: hidden;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+
+  &__img {
+    @include aspect-ratio(5,3);
+
+    .content {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      @include cover-bg;
+    }
+  }
+
+  &__content {
+    padding: 40px 30px;
+
+    .title {
+      display: block;
+      min-height: 45px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .over {
+    @include absolute-all;
+    display: block;
+    border-radius: 10px;
+    background-color: rgba($color-over-blue, 0.9);
+    color: white;
+    opacity: 0;
+    >span {
+      text-align: center;
+      @include font-baloo;
+      @include absolute-center;
+      .plus {
+        display: block;
+        font-size: 36px;
+      }
+    }
+  }
+
+  &:hover {
+    .over {
+      opacity: 1;
+    }
+  }
+}

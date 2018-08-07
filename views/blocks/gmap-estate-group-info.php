@@ -1,0 +1,1 @@
+<div class="gmap-group-infowindow"><h4>Projekta Nosaukums / adrese</h4><table><tr><td width="20"><b>1.</b></td><td width="200"> Istabas 4, 125m2</td><td width="130"> EUR 45 000</td></tr><tr><td><b>2.</b></td><td> Istabas 4, 125m2</td><td> EUR 45 000</td></tr><tr><td><b>3.</b></td><td> Istabas 4, 125m2</td><td> EUR 45 000</td></tr></table></div>

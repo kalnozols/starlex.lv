@@ -1,0 +1,176 @@
+
+/* 
+colors
+ */
+
+$color-bg-lightblue: #dbe4ed; 
+$color-bg-darkblue: #214687;
+$color-tirkizs: #00add5;
+
+
+$color-yellow: #f8ea1d;
+$color-btn-blue: #246496;
+$color-over-blue: #226999;
+$color-TEXT-blue: #2b8cad;
+$color-green: #1dbb7c;
+$color-soc: #34babb;
+$color-ocean: #00babb;
+$color-fog: #d0e0e1;
+$color-gray-bg: #edf7fa;
+
+ /* Brakpoints */
+
+$mobile: '(min-width: 520px)';
+$tablet: '(min-width: 768px)';
+$mid: '(min-width: 992px)';
+$desktop: '(min-width: 1400px)';
+
+@mixin absolute-center(){
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@function shadow_left($color, $iterations) {
+  $val: 0px 0px $color;
+  @for $i from 1 through $iterations {
+    $val: #{$val}, #{-$i}px #{$i}px #{$color};
+  }
+  @return $val;
+}
+
+@function shadow_right($color, $iterations) {
+  $val: 0px 0px $color;
+  @for $i from 1 through $iterations {
+    $val: #{$val}, #{$i}px #{$i}px #{$color};
+  }
+  @return $val;
+}
+
+@function shadow_left_top($color, $iterations) {
+  $val: 0px 0px $color;
+  @for $i from 1 through $iterations {
+    $val: #{$val}, #{-$i}px #{-$i}px #{$color};
+  }
+  @return $val;
+}
+
+@mixin shadowLeft($color, $iterations) {
+  box-shadow: shadow_left($color, $iterations);
+}
+
+
+@mixin shadowRight($color, $iterations) {
+  box-shadow: shadow_right($color, $iterations);
+}
+
+@mixin shadowLeftTop($color, $iterations) {
+  box-shadow: shadow_left_top($color, $iterations);
+}
+
+@mixin absolute-center(){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-center-horizontal(){
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin absolute-all() {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin cover-bg() {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin circle ($size, $color: transparent){
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+
+  @if($color){
+    background-color: $color;
+  }
+}
+
+
+
+@function is-direction($value) {
+  $is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+  $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+
+  @return $is-keyword or $is-angle;
+}
+
+@function legacy-direction($value) {
+  @if is-direction($value) == false {
+    @error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.";
+  }
+
+  $conversion-map: (
+          to top          : bottom,
+          to top right    : bottom left,
+          to right top    : left bottom,
+          to right        : left,
+          to bottom right : top left,
+          to right bottom : left top,
+          to bottom       : top,
+          to bottom left  : top right,
+          to left bottom  : right top,
+          to left         : right,
+          to left top     : right bottom,
+          to top left     : bottom right
+  );
+
+  @if map-has-key($conversion-map, $value) {
+    @return map-get($conversion-map, $value);
+  }
+
+  @return 90deg - $value;
+}
+
+
+@mixin linear-gradient($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+

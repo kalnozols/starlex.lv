@@ -1,0 +1,155 @@
+.info-block {
+	margin-top: 30px;
+	@include linear-gradient(to right bottom, #2284a6 0%, #36ca98 100%);
+	padding: 30px;
+	border-radius: 15px;
+	color: white;
+
+	&__item {
+		overflow: hidden;
+		padding-bottom: 26px;
+		font-size: 18px;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+		strong {
+			@include font-baloo;
+			    font-size: 24px;
+   				 font-weight: 400;
+		}
+
+		&.descr {
+			text-align: center;
+			font-size: 14px;
+			a{
+				color:white;
+				font-weight: bold;
+			}
+
+			.btn {
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__content {
+		float: left;
+	}
+
+	&__icon {
+		margin: 0 15px;
+		width: 52px;
+		height: 52px;
+		float: left;
+
+		 svg path{  fill: white;}
+	 	 svg polygon { fill: white;}
+	}
+	.info-security{
+
+		text-align: center;
+		padding:30px;
+	}
+
+
+}
+
+.apply-title {
+	@include font-baloo;
+	color: $color-ocean;
+	margin: 30px 0;
+	text-align: center;
+}
+
+.liner {
+
+	width: 100%;
+    height: 10px;
+    z-index: -1;
+    position: absolute;
+    top: 20px;
+    border: 2px solid #289cab;
+    background-color:#e2f3f4;
+
+    .inner {
+      	display:block;
+      	@include linear-gradient(to right , #2284a6 0%, #36ca98 40%);
+    		height:100%;
+
+    	&.step2 {
+    		width:50%;    		
+    	}
+    	&.step3 {
+    		width:80%;    		
+    	}
+    	 &.step4 {
+    		width:100%;    		
+    	}
+
+    }
+}
+
+.precentage {
+		font-size: 1.25em;
+    font-weight: bold;
+    color: $color-ocean;
+
+  	 	&.step2 {
+    		margin-left:47%;   		
+    	}
+    	 &.step2:before {
+    		content: "50%";   		
+    	}
+    	&.step3 {
+    		margin-left:80%;  		
+    	}
+    	 &.step3:before {
+    		content: "90%";    		
+    	}
+
+    }
+
+
+.steps {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+
+	&__item {
+		img {
+			margin-top: 16px;
+		}
+	}
+
+	.step {
+		padding: 10px 15px;
+		text-align: center;
+		border-radius: 8px;
+		@include font-baloo;
+		font-size: 24px;
+		box-shadow: 0 3px 8px 0 rgba(#113154, 0.1);
+
+
+		&__done {
+		background-color: $color-ocean;
+			color: white;
+		}
+
+		&__curent {
+			background-color: $color-ocean;
+			color:$color-yellow;
+		}
+
+		&__next {
+			background-color: #e2f3f4;
+			color: $color-btn-blue;
+		}
+
+		@media #{$tablet}{
+			min-width: 65px;
+		}
+	}
+}
