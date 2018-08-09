@@ -215,7 +215,7 @@ section.search-grid{
    		 text-transform: uppercase;
    		 font-size: 0.9em;
    		 cursor: pointer;
-
+		 &:hover{background-color: #11bde4;}
       }
       .next-img, .prev-img {
       	width:30px;
@@ -247,7 +247,7 @@ section.search-grid{
       .image-wrap{
       				height:200px;
 			 @media #{$tablet} { height:200px;}
-     		 @media #{$mid} { height:15vw; }
+     		 @media #{$mid} { height:10vw; }
      		 overflow: hidden;
 
       	.single-image{
@@ -257,7 +257,7 @@ section.search-grid{
 			height:200px;
 			width: 100%;
 			 @media #{$tablet} { height:200px;}
-     		 @media #{$mid} { height:15vw; }
+     		 @media #{$mid} { height:10vw; }
 
       	}
       }
@@ -518,6 +518,7 @@ height:250px;
    		 text-transform: uppercase;
    		 font-size: 0.7em;
    		 cursor: pointer;
+   		 &:hover{background-color: #11bde4;}
 
       }
       .next-img, .prev-img {

@@ -3199,6 +3199,8 @@ section.search-grid .image-slider-wrap {
     text-transform: uppercase;
     font-size: 0.9em;
     cursor: pointer; }
+    section.search-grid .image-slider-wrap .show-button:hover {
+      background-color: #11bde4; }
   section.search-grid .image-slider-wrap .next-img, section.search-grid .image-slider-wrap .prev-img {
     width: 30px;
     height: 30px;
@@ -3228,7 +3230,7 @@ section.search-grid .image-slider-wrap {
         height: 200px; } }
     @media (min-width: 992px) {
       section.search-grid .image-slider-wrap .image-wrap {
-        height: 15vw; } }
+        height: 10vw; } }
     section.search-grid .image-slider-wrap .image-wrap .single-image {
       display: inline-block;
       background-size: cover;
@@ -3240,7 +3242,7 @@ section.search-grid .image-slider-wrap {
           height: 200px; } }
       @media (min-width: 992px) {
         section.search-grid .image-slider-wrap .image-wrap .single-image {
-          height: 15vw; } }
+          height: 10vw; } }
   section.search-grid .image-slider-wrap .featured-description {
     height: 100px;
     background-color: #FFF;
@@ -3465,6 +3467,8 @@ section.map-search {
       text-transform: uppercase;
       font-size: 0.7em;
       cursor: pointer; }
+      .gmap-infowindow .image-slider-wrap .show-button:hover {
+        background-color: #11bde4; }
     .gmap-infowindow .image-slider-wrap .next-img, .gmap-infowindow .image-slider-wrap .prev-img {
       width: 30px;
       height: 30px;

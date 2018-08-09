@@ -24,9 +24,9 @@
                 <a href="#" class="prev-img"></a>
                 <a href="#" class="next-img"></a>
                 <div class="image-wrap <?php echo "c".$i; ?>">
-                  <div class="single-image"   style="background-image: url('./public/img/jaunie-cat.png');"  ></div>
-                  <div class="single-image"   style="background-image: url('./public/img/majas-cat.png');"  ></div>
-                  <div class="single-image"   style="background-image: url('./public/img/dzivokli-cat.png');"  ></div>
+                  <div class="single-image"   style="background-image: url('../public/img/jaunie-cat.png');"  ></div>
+                  <div class="single-image"   style="background-image: url('../public/img/majas-cat.png');"  ></div>
+                  <div class="single-image"   style="background-image: url('../public/img/dzivokli-cat.png');"  ></div>
                 </div>
                 <div class="show-button">Apskatīt</div>
 

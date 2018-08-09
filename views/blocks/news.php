@@ -19,7 +19,7 @@
 
           <?php for( $i= 1 ; $i <= $newscount ; $i++ ): ?>
           <div class="col-md-6">
-             <div class="news-wrap" data-aos="fade-right"  style="background-image: url('./public/img/news1.png');">
+             <div class="news-wrap" data-aos="fade-right"  style="background-image: url('../public/img/news1.png');">
 
                 <div class="news-right" >
                   <h4>Jaunuma virsraksts līdz divām rindām!</h4>

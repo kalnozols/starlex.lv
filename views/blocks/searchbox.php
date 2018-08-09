@@ -43,7 +43,7 @@
 	<input type="submit" value="Atlasīt">
 
 	<div class="see-on-map">
-		<a><img src="./public/img/on-map-icon.png" /> Skatīt uz kartes </a>
+		<a><img src="../public/img/on-map-icon.png" /> Skatīt uz kartes </a>
 	</div>
 
 	</form>

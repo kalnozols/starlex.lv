@@ -8,7 +8,7 @@
 		<div class="container lg">
 			<div class="row">
 				<div class="col-md-3 col-xs-12 logo-div">
-					<a class="main-nav__logo" href="index.php"><img src="public/img/logo.svg" width="210" "></a>
+					<a class="main-nav__logo" href="index.php"><img src="../public/img/logo.svg" width="210" "></a>
 					<div class="logo-robs"></div>
 					<button class="nav-burger">
 						<span class="burger">

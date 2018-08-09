@@ -42,7 +42,7 @@ section.loader-wrap.ready .loader-logo {animation: pazud 0.25s infinite; animati
 
 <section class="loader-wrap">
 <div class="loader">
-	<div class="loader-logo"><img class="logo-img" src="./public/img/loader/logo.png" />
+	<div class="loader-logo"><img class="logo-img" src="../public/img/loader/logo.png" />
 	<div class="loader-animation">
 		<div class="first anim">
 			<svg x="0px" y="0px" viewBox="0 0 96.6 41.8" enable-background="new 0 0 96.6 41.8" xml:space="preserve">

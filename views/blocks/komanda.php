@@ -1,7 +1,7 @@
 <section class="komanda bg-lightblue">
         <div class="container">
            <div class="col-md-6">
-              <img src="./public/img/egils-portrets.png" alt="photo" />
+              <img src="../public/img/egils-portrets.png" alt="photo" />
             </div>
             <div class="col-md-6"></div>
             </div>
